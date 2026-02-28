@@ -148,3 +148,7 @@
 	pinctrl-names = "default";
 	pinctrl-0 = <&uart4m0_xfer>;
 };
+
+&fiq_debugger {
+	rockchip,baudrate = <1500000>;
+};
