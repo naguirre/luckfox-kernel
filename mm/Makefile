@@ -3,6 +3,8 @@
 # Makefile for the linux memory manager.
 #
 
+CFLAGS_mmap.o := -O2
+
 KASAN_SANITIZE_slab_common.o := n
 KASAN_SANITIZE_slab.o := n
 KASAN_SANITIZE_slub.o := n
