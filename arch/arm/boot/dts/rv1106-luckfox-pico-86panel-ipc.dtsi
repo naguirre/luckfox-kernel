@@ -10,7 +10,7 @@
 
 / {
 	chosen {
-		bootargs = "earlycon=uart8250,mmio32,0xff4c0000 console=ttyFIQ0 root=/dev/mmcblk0p7 rootwait snd_soc_core.prealloc_buffer_size_kbytes=16 coherent_pool=0";
+		bootargs = "earlycon=uart8250,mmio32,0xff4c0000,1500000 console=ttyFIQ0,1500000 root=/dev/mmcblk0p7 rootwait";
 	};
 
 	backlight: backlight {
@@ -190,6 +190,7 @@
 
 /************************* FIQ_DUBUGGER ****************************/
 &fiq_debugger {
+	rockchip,baudrate = <1500000>;
 	rockchip,irq-mode-enable = <1>;
 	status = "okay";
 };
